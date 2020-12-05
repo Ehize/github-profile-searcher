@@ -61,7 +61,7 @@ fetch(`https://api.github.com/users/${user_name}`)
         return false;
     }else{
         user_img.innerHTML = `<img src="${data.avatar_url}">`;
-        userName.innerHTML = `<a href="${data.html_url}">${data.login}</a>`;
+        userName.innerHTML = `<a target="_blank" rel="nofollow" href="${data.html_url}">${data.login}</a>`;
         followers_.innerHTML = data.followers;
         follow_.innerHTML = data.following;
     }
