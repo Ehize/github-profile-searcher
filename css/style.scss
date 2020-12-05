@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(90deg, #ff00cc 0%,#333399 100% );
+    animation: spin .5s infinite linear;
+}
+.spinner:after {
+    width: 90%;
+    height: 90%;
+    background-color: #151515;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+/*Simulate page content*/
+.main-content{
+    width: 100%;
+    height: 100vh;
+    background: url("https://source.unsplash.com/random/4000x4000") center no-repeat;
+    background-size: cover;
+}
+
+
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// 	font-family: "Roboto";
+// }
+
+// body {
+//     background-color: #f6f8fa;
+//     display: flex;
+//     align-items: center;
+//     min-height: 100vh;
+// }
+
+// svg {
+//     position: relative;
+//     width: 150px;
+//     height: 150px;
+//     animation: rotate 2s linear infinite;
+// }
+
+// @keyframes rotate {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+//     100% {
+//         transform: rotate(360deg);
+//     }
+// }
+
+// svg circle {
+//     width: 100%;
+//     height: 100%;
+//     fill: none;
+//     stroke-width: 10;
+//     stroke: #00a1ff;
+//     transform: translate(5px,5px);
+//     stroke-dasharray: 440;
+//     stroke-dashoffset: 440;
+//     animation: animate 4s linear infinite; 
+// }
+
+// @keyframes animate {
+//     0%, 100% {
+//         stroke-dashoffset: 440;
+//     }
+//     50% {
+//         stroke-dashoffset: 0;
+//     }
+//     50.1% {
+//         stroke-dashoffset: 880;
+//     }
+// }
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    .row {
+        display: flex;
+        justify-content: center;
+        width: 850px;
+        .user_info {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding: 50px;
+            box-sizing: border-box;
+            border: 1px solid #e1e4e8;
+            background-color: #ffffff;
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .repo {
+            width: 70%;
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}
+
+.user_name{
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    h3 {
+       font-size: 16px;
+       font-weight: normal;
+       margin: 0;
+    }
+    h1 {
+       font-size: 25px;
+       margin: 5px 0;
+    }
+}
+
+.follow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 25px;
+    .item {
+        p {
+            font-size: 14px;
+        }
+        span {
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}
+
+.repo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .repo_details {
+        display: flex;
+        justify-content: space-between;
+        gap: 15;
+        flex-wrap: wrap;
+        .item_ {
+            width: 47%;
+            border: 1px solid #e1e4e8;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            .repo_name {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+            .repo_details_ {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .info_ {
+                    font-size: 12px;
+                    &.fork {
+                        .fa{
+                            margin-right: 5px;
+                        }
+                    }
+                    &.size {
+                        .fa {
+                          margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.input_wrapper {
+	position: relative;
+	width: 500px;
+	height: 50px;
+	background-color: #fff;
+    margin-bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+	.input_user {
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		border: none;
+        padding: 5px 160px 5px 15px;
+        box-sizing: border-box;
+        &::placeholder{
+            color: #bdbdbd;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+    .btn_submit{
+        width: 150px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: black;
+        color: #fff;
+    }
+}
