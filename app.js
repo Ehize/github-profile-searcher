@@ -84,7 +84,7 @@ fetch(`https://api.github.com/users/${user_name}`)
             if(repo_data.message === "Not Found") {
                 repo_details.innerHTML=`
                 <div class="item_">
-                            <div class="repo_name">devAmit</div>
+                            <div class="repo_name">repo_name1</div>
                             <div class="repo_details_">
                                 <div class="info_ star">
                                   <i class="fa fa-star-o"></i>10
@@ -99,9 +99,9 @@ fetch(`https://api.github.com/users/${user_name}`)
                         </div>
                 `
             user_img.innerHTML = `<img src="images/github.png">`;
-            userName.innerHTML = `poly_atal`;
-            followers_.innerHTML = "500";
-            follow_.innerHTML = "50";
+            userName.innerHTML = `_____`;
+            followers_.innerHTML = "0";
+            follow_.innerHTML = "0";
     }else {
        let repo_Data = repo_data.map(item => {
            console.log(item);
