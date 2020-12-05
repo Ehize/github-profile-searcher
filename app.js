@@ -87,13 +87,13 @@ fetch(`https://api.github.com/users/${user_name}`)
                             <div class="repo_name">repo_name1</div>
                             <div class="repo_details_">
                                 <div class="info_ star">
-                                  <i class="fa fa-star-o"></i>10
+                                  <i class="fa fa-star-o"></i>0
                                 </div>
                                 <div class="info_ fork">
-                                    <p><i class="fas fa-code-branch"></i>30</p>
+                                    <p><i class="fas fa-code-branch"></i>0</p>
                                 </div>
                                 <div class="info_ size">
-                                    <p><i class="fa fa-file"></i>3000kb</p>
+                                    <p><i class="fa fa-file"></i>0kb</p>
                                 </div>
                             </div>
                         </div>
